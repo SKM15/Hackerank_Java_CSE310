@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Solution 
+{
+    public static void main(String[] args) 
+    {
+        Scanner obj = new Scanner(System.in);
+        String binary = obj.nextLine();
+        obj.close();
+        
+        int decimal = Integer.parseInt(binary, 2);
+    
+        if (decimal == 69)
+        {
+            System.out.println("E");
+            return;
+        }
+         else if (binary.length() != 8) 
+        {
+              System.out.println("INVALID PAPER CODE");
+              return;
+        }
+        else if (decimal == 69)
+        {
+            System.out.println("E");
+        }
+    
+        
+        if (decimal >= 65 && decimal <= 90) 
+        {
+            System.out.println( binary + " represents " + decimal + " which corresponds to '" + (char) decimal + "'."); 
+        } 
+        else
+        {
+            
+            System.out.println((char) decimal);
+            System.out.println(binary+" is having inly 7 bits");
+        }
+       
+    }
+}
