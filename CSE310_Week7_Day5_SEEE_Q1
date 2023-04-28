@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main 
+{
+  public static void main(String...args)
+  {
+    Scanner obj = new Scanner(System.in);
+    String str = obj.nextLine();
+    if (!str.matches("[a-zA-Z0-9]+")) {
+      System.out.println("Error");
+      return;    }
+    int[] count = new int[256]; 
+    int maxCount = 0;
+    char maxChar = '\0';
+    for (int i = 0; i < str.length(); i++) {
+      char ch = str.charAt(i);
+      count[ch]++;
+      if (count[ch] > maxCount || (count[ch] == maxCount && ch < maxChar)) {
+        maxCount = count[ch];
+        maxChar = ch;
+      } }
+    System.out.println("Maximum occurring character is: " + maxChar);
+  }}
