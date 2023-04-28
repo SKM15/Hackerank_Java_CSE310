@@ -1,0 +1,10 @@
+import java.util.Scanner;
+public class BracketGame {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        String bracketTags = obj.nextLine();
+        String name = obj.nextLine();
+        String result = bracketTags.substring(0, 2) + name + bracketTags.substring(2);
+        System.out.println(result);
+        obj.close();
+    }}
