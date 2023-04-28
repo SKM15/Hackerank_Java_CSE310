@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution 
+{
+
+    public static void main(String[] args)
+    {
+         Scanner obj = new Scanner(System.in);
+
+        int n = obj.nextInt();         
+        obj.nextLine();  
+
+        String[] arr = obj.nextLine().split(" ");  
+        int numStrings = 0;          
+        int numInts = 0;
+        for (String elem : arr)
+        {
+            if (elem.matches("\\d+")) {
+                numInts++;
+            } else {
+                numStrings++;
+            }
+        }
+
+        System.out.println(numInts);         
+        System.out.println(numStrings);   
+    }
+    }
