@@ -1,0 +1,39 @@
+import java.util.Scanner;
+enum Subject 
+{
+ Java("Shruti", 4),
+ OS("Puneet Kumar", 3),
+ AI("James William", 2),
+ Android("Md. Adil Khan", 3);
+ String facultyName;
+ int credits;
+ Subject(String faculty, int credit){
+ facultyName=faculty;
+ credits=credit;
+ }
+ public String FacultyName(){
+ return facultyName;
+ }
+ public int Credits() {
+ return credits;
+ }
+}
+public class Solution {
+ public static void main(String...args) {
+ Scanner sc=new Scanner(System.in);
+ String subject=sc.nextLine();
+ boolean found=false;
+ for(Subject s:Subject.values()){
+ if(s.name().equals(subject)){
+ System.out.println(s.FacultyName() + " " + s.Credits());
+ found = true;
+ break;
+ }
+ }
+ if (!found)
+ {
+ System.out.println("This subject is not running in this semester.");
+ }
+ 
+ }
+}
