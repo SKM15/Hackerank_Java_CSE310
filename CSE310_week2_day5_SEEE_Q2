@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Solution 
+{
+
+    public static void main(String...stringsargs) 
+    {
+           int result;
+        Scanner obj = new Scanner(System.in);
+        double A = obj.nextDouble();
+        if (A > 0)
+        {
+           result = (int)A;
+            System.out.println(result);
+        }
+        else
+        {
+            System.out.println("Invalid Input");
+        }
+    }
+}
