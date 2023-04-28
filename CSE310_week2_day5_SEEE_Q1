@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Solution
+{
+
+    public static void main(String...args) 
+    {
+          Scanner obj = new Scanner(System.in);
+               
+              float A = obj.nextFloat();
+              float B = obj.nextFloat();
+              float C = obj.nextFloat();
+              int D = (int) Math.ceil(A);
+              int E = (int) Math.ceil(B);
+              int F = (int) Math.ceil(C);
+        
+                System.out.print(D+" "+E+" "+F);
+    }
+}
