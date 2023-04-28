@@ -1,0 +1,63 @@
+import java.util.Scanner;
+
+public class Student 
+{
+
+    private String name;
+
+    private int registrationNo;
+
+    public Student(String name, int registrationNo) {
+
+        this.name = name;
+
+        this.registrationNo = registrationNo;
+
+    }
+
+    public static void main(String...args) 
+    {
+
+        Scanner obj = new Scanner(System.in);
+
+        int choice = obj.nextInt();
+
+        if (choice == 1) 
+        {
+
+            String name = obj.next();
+
+            int registrationNo = -1;
+
+            while (registrationNo < 0) 
+            {
+
+                registrationNo = obj.nextInt();
+
+                if (registrationNo < 0) {
+
+                    System.out.println("RegistrationNo should be positive value.");
+
+                }
+
+            }
+
+            Student student = new Student(name, registrationNo);
+
+            System.out.println(student.name + "," + student.registrationNo);
+
+        } else if (choice == 2) {
+
+            Student student = new Student(null, 0);
+
+            System.out.println(student.name + "," + student.registrationNo);
+
+        } else {
+
+            System.out.println("Wrong Choice");
+
+        }
+
+    }
+
+}
