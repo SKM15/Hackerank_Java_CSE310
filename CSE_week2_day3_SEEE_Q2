@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Solution
+{
+    public static void main(String...args) 
+    {
+        float P;
+        int f_P;
+        Scanner obj = new Scanner(System.in);
+        float c_held = obj.nextFloat();
+        float c_attended = obj.nextFloat();
+        P = (int)((c_attended / c_held) * 100);
+        if (P>=75.0)
+        {
+            f_P = (int)P;
+            System.out.println(f_P);
+            System.out.println("Yes");
+        }
+        else
+        {
+            f_P = (int)P;
+            System.out.println(f_P);
+            System.out.println("No");
+        }         
+
+    }
+}
