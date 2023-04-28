@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.next();
+        System.out.println(isPalindromePossible(str));
+    }
+    public static boolean isPalindromePossible(String str) {
+        int left = 0, right = str.length()-1;
+        while (left < right) {
+            if (str.charAt(left) != str.charAt(right)) {
+                return isPalindrome(str, left+1, right) || isPalindrome(str, left, right-1);
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+    public static boolean isPalindrome(String str, int left, int right) {
+        while (left < right) {
+            if (str.charAt(left) != str.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
